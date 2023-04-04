@@ -10,9 +10,6 @@ export async function connectWallet(){
     console.log("Account:", await signer.getAddress());
     return userAccount;
 }
-export const test=()=>{
-    return "This was a  test nothing more";
-}
 
 
 
