@@ -43,6 +43,8 @@ export default class Header extends Component{
                         localStorage.setItem("User","connect");
                         this.setState({userAddress : localStorage["User"]});
                         localStorage.setItem("checkConnection",false);
+                        this.setState({check : false});
+
                       }}
                   }>{localStorage["checkConnection"]?localStorage["User"]:this.state.userAddress}</button>
             </ul>
