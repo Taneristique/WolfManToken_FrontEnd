@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {connectWallet} from "../Connect";
 
 export default class Header extends Component{
+
   constructor(){
     super();
     this.state={check:false, userAddress : 'connect'};
@@ -15,8 +16,7 @@ export default class Header extends Component{
       Set User to a default value if it does not exist*/
         localStorage["User"]="connect";
       }
-      this.setState({check:localStorage["checkConnection"]});
-      this.setState({userAddress : localStorage.getItem("User")});
+      this.state=({check:localStorage["checkConnection"],userAddress : localStorage.getItem("User")});
     }
   }  
   
